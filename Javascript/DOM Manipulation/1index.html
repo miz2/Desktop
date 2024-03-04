@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    
+</head>
+<body>
+    <div>
+        <!-- all p are siblings of each other -->
+        <p id="message">JS DOM</p>
+        <p id="message">JS DOM</p>
+        <!-- <p>JS DOM</p>
+        <p>JS DOM</p> -->
+
+        <input type="radio" name="language" value="JS">
+        <input type="radio" name="language" value="Python">
+        <!-- namestag -->
+        <div id="container">
+            <h1 class="message2">F1</h1>
+            <h1 class="message2">F2</h1>
+            <h1 class="message2">F3</h1>
+            <h1 class="message2">F4</h1>
+            <p class="message2"></p>
+        </div>
+       
+    </div>
+
+    <div class="title">
+        <!-- if we remove the spaces then it will not view -->
+        <p class="text">welcome</p>
+        <p class="text">welcome</p>
+        <p class="text">welcome</p>
+        <p class="text">welcome</p>
+        <div class="title2"><p class="text">welcome</p><p class="text">welcome</p><p class="text">welcome</p><p class="text">welcome</p>
+        </div>
+    </div>
+
+    <!-- next siblings -->
+    <div class="t1">
+        <p>sjbhfhf</p>
+        <p class="second">sjbhfhf</p>
+        <p>sjbsgdhghfhf</p>
+    </div>
+    <script>
+    // all will return arrays 
+        // selects the first element by id 
+        let msg=document.getElementById("message")
+        console.log(msg)
+       // elements by name
+        let btn=document.getElementsByName("language")
+        console.log(btn)
+
+        // by tag name
+        let heading=document.getElementsByTagName("h1")
+        console.log(heading)
+
+        // class name 
+        let ms=document.getElementsByClassName("message2")
+        console.log(ms)
+
+        // query selector and queryselectorAll
+        // qsl is for 1st :add the css selector 
+        let fg=document.querySelector(".message2")
+        console.log(fg)
+        // returns nodelist
+        let fgl=document.querySelectorAll(".message2")
+        console.log(fgl)
+        // can be also done for a specific container and not just document 
+        // but not for class name
+        let cont=document.getElementById("container")
+        let x=cont.querySelectorAll(".message2")
+        console.log(x)
+
+
+        // traversing the DOM tree: To get Parent Node of a node we can use the parentNode Property
+
+        let tf=document.querySelector(".text")
+        console.log(tf.parentNode)
+
+        // get parent 
+        let parent=document.querySelector(".title")
+        console.log(parent.firstChild)
+        console.log(parent.firstElementChild)
+        // all child nodes
+        console.log(parent.childNodes)
+        let parent2=document.querySelector(".title2")
+        console.log(parent2.childNodes)
+
+
+        // selecting next and prev siblings
+        let second=document.querySelector(".second")
+        console.log(second.previousElementSibling)
+        console.log(second.nextElementSibling)
+
+        
+    </script>
+</body>
+</html>

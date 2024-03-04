@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <LI>About</LI>
+        <li>Blog</li>
+        <li style="display: none;">Project</li>
+    </ul>
+
+    <div id="m1">
+
+    </div>
+    <script>
+        let div=document.createElement("div")
+        div.innerHTML="<p>Welcome to my page</p>"
+        // add on body 
+        // use appendChild() to add a node to the end of the list of child nodes of specified parent node
+        document.body.appendChild(div)
+        div.className="title"
+        console.log(div)
+        
+        let menu=document.getElementById("menu")
+        let list=document.createElement("li")
+        list.innerHTML="Contact"
+        menu.appendChild(list)
+
+        // textContent
+        console.log(menu)
+        console.log("Using text content"+menu.textContent)
+        console.log("Using innerHtml: follows css styles"+menu.innerHTML)
+
+        // insert text using textContent
+        let m1=document.getElementById("m1")
+        // adds a plane text
+        m1.textContent="<h1>Hello!</h1>"
+        m1.innerHTML="<h1>Hello!</h1>"
+
+        // after method is used to insert one or more nodes after the element
+        // can accpet multiple elements 
+        // m1.after(str1,str2)
+
+        // append method
+        // add multiple elements
+        // parentNode.append(newNodes) accept multiple nodes
+
+        // prepend
+        // parentNode.append(newNodes) adds new nodes as first child
+
+        // insert adjacent html
+        menu.insertAdjacentHTML("beforeend","<li>contact</li>")
+        menu.insertAdjacentHTML("afterbegin","<li>contact</li>")
+
+        // replace child 
+        // parentNode.replaceNode 
+
+        // cloneNode to clone a node
+        // it will clone only ul
+        // let newNode=menu.cloneNode()
+        // clone everything inside li
+        let newNode=menu.cloneNode(true)
+        console.log(newNode)
+        
+        // remove child
+        menu.removeChild(menu.lastElementChild)
+        menu.removeChild(menu.firstElementChild)
+
+        // insertBefore(): insert a new node before an existing node as a child node of a parent node 
+        // parentNode.insertBefore(newNode,existingNode)
+        menu.insertBefore(newNode,menu.firstElementChild)
+        
+
+    </script>
+</body>
+</html>

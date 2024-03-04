@@ -1,0 +1,51 @@
+
+.tes{
+height: 100px;
+width: 100px ;
+background-color: aqua;
+border: 2px solid black;
+display: inline-block;
+}
+    body{
+        background-image: url("heart.jpg");
+        background-size: contain;
+    }
+#box1{
+    height: 100px;
+    width: 100px;
+    background-color: cadetblue;
+    font-size: 10px;
+}
+#box2{
+    height: 50px;
+    /* width: 30%; */
+    background-color: rgb(51, 142, 112);
+    margin-left: 10%;
+    font-size: 2em;
+    width: 5rem;
+}
+#b1{
+    position: static;
+    background-color: beige;
+    background-image: url("heart.jpg");
+    background-size: cover;
+}
+#b2{
+    position: relative;
+    top: -10px;
+    left: 10px;
+    background-color: blanchedalmond;
+    z-index: 2;
+}
+#b3{
+    position: sticky;
+    top: 10px;
+    left: 210px;
+    z-index: -2;
+    background-color: cadetblue;
+}
+#b4{
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+}

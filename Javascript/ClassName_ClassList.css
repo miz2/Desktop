@@ -1,0 +1,17 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.yellow{
+    background-color: yellow;
+    color: wheat;
+}
+.red
+{
+    background-color: red;
+    color: aliceblue;
+}
+.textdark{
+    color: black;
+    background-color: blanchedalmond;
+}

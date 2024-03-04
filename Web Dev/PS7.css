@@ -1,0 +1,20 @@
+.container{
+    background-color: blue;
+    height: 300px;
+    width: 300px;
+}
+@media (max-width:300px){
+    .container{
+        background-color: chocolate;
+    }
+}
+@media (min-width:300px) and (max-width:400px){
+    .container{
+        background-color: pink;
+    }
+}
+@media (min-width:600px){
+    .container{
+        background-color: green;
+    }
+}

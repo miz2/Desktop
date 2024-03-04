@@ -1,0 +1,13 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#joke{
+    background-color: aqua;
+    color: royalblue;
+    font-size: 1.4em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}

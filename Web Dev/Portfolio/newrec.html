@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation Form</title>
+    <style>
+        /* Basic styling for the form */
+        *{
+    margin: 0;
+    padding: 0;
+}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label, input, textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+       
+body{
+    background-color: rgb(0,0,33);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+    background-color: rgb(18, 18, 62);
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 23px;
+}
+nav ul li a{
+   text-decoration: none;
+   color: white;
+}
+nav ul li a:hover{
+    color: lavender;
+    font-size: 1.04rem;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left">
+            Mizaan's Portfolio
+            <br>
+            <span style="font-size: 12px;">Contact No.79347483</span>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="Projects.html">Project</a></li>
+                <li><a href="rec.html">Recommendation</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+    <h1>Leave a Recommendation</h1>
+    <form id="recommendationForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="recommendation">Recommendation:</label>
+        <textarea id="recommendation" name="recommendation" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // JavaScript code for handling form submission
+        const form = document.getElementById("recommendationForm");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // You can add code here to handle the form data, e.g., sending it to a server or storing it locally
+            const name = document.getElementById("name").value;
+            const recommendation = document.getElementById("recommendation").value;
+
+            // For this example, we'll simply display an alert with the submitted data
+            alert(`Thank you, ${name}, for your recommendation: "${recommendation}"`);
+            
+            // You can add additional logic to process or store the data as needed.
+        });
+    </script>
+</body>
+</html>

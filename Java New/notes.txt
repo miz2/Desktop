@@ -1,0 +1,24 @@
+Taking input in java :
+commandline arguments
+ javac Input.java
+ java Input 23
+ hence we have made a command:this is our cutomized command
+
+ System.in.read()
+
+ Buffered Reader:ile Input2.java
+
+ Scanner :file Input3.java
+
+ Syste.console():generally used for passwords such that they are hidden 
+
+ %10 ->Digit last 
+ %100 second last 
+ power to change position
+  
+  recursion allows us to go bakc to history and we can return 
+  which is not available in loops 
+  works on stack
+with O(n);
+if we fill the stack in recursion we may get StackOverflowError at runtime 
+which cant be treated hence never try to make infinity loop with recursion

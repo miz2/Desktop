@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>Quiz Application</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-logo border">
+            <div class="logo"></div>
+        </div>
+        <div class="submit-ontime">
+            <p class="add-first">Submit on Time</p>
+            <div id="timerBox" class="timer"></div>
+        </div>
+        
+        <div class="Home">
+            <p><span>Home</span></p>
+        </div>
+        <div class="About Us">
+            <p><span>About Us</span></p>
+        </div>
+        <div class="Contact Us">
+            <p><span>Contact Us</span></p>
+        </div>
+
+    </div>
+    <div class="container">
+        <div id="box">
+            <h2 id="quesBox">This is a dummy question</h2>
+            <div class="row">
+                <input class="options" id="oa" type="radio" value="a" name="option">
+                <label for="oa"> Option a </label>
+            </div>
+            <div class="row">
+                <input class="options" id="ob" type="radio" value="b" name="option">
+                <label for="ob"> Option b </label>
+            </div>
+            <div class="row">
+                <input class="options" id="oc" type="radio" value="c" name="option">
+                <label for="oc"> Option c </label>
+            </div>
+            <div class="row">
+                <input class="options" id="od" type="radio" value="d" name="option">
+                <label for="od"> Option d </label>
+            </div>
+            <div class="button-row">
+                <button class="btn" id="prevButton" onclick="prevQuestion()">Previous</button>
+                <button class="btn" id="nextButton" onclick="nextQuestion()">Next</button>
+                <button class="btn" onclick="submitQuiz()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

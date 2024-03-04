@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>input{
+        background-color: red;
+        font-size: 12px;
+        width: 300px;
+    }
+        </style>
+</head>
+<body>
+    <input type="text" id="username" placeholder="username" style="background-color: red; font-size: 20px;">
+    <script>
+        let ib=document.getElementById("username")
+        console.log(ib.style);
+        console.log(ib.style.backgroundColor);
+        ib.style.padding="10px"
+        console.log(ib);
+
+        // setting inline style
+        // keep existing css o/w
+        // ib.style.cssText="width:200px;"
+        ib.style.cssText+="width:200px; height:100px;"
+        console.log(ib);
+
+        // get computed style method  for external css/internal
+        console.log(window.getComputedStyle(ib));
+        console.log(window.getComputedStyle(ib).fontFamily);
+        console.log(window.getComputedStyle(ib).backgroundColor);
+        console.log(window.getComputedStyle(ib).width);
+        
+    </script>
+
+</body>
+</html>

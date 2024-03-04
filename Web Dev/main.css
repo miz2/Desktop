@@ -1,0 +1,21 @@
+h3{
+    color: aliceblue;
+}
+p{
+    color: violet;
+    background-color: rgb(45,43,21);
+}
+button{
+    color: rgb(101, 70, 25);
+    background-color: rgb(189, 70, 70);
+}
+body{
+    background-color: rgb(191, 34, 115);
+}
+*{
+    background-color:  rosybrown ;
+}
+/* the styles at bottom have highest priority */
+#head1{
+    background-color: aqua;
+}

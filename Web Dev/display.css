@@ -1,0 +1,17 @@
+#hello{
+    background-color: blueviolet;
+    display: inline;
+}
+button{
+    display: block;
+    background-color: blanchedalmond;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+    padding: 25px;
+    display: inline-block;
+    
+    /* to prevent drawback of inline we use inline block */
+}

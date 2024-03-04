@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" class="main message">Coder Mizaan </h1>
+    <script>
+        let x=document.getElementById("title")
+        console.log(x.classList)
+        // adds a new class and removes/overrites others
+        // conact using +=
+        x.className="new" 
+        // x.className+="new" 
+        console.log(x)
+        // can also add multiple classes
+        x.classList.add("newC")
+        console.log(x);
+        console.log(x.classList)
+        // remove classes:multiple classes
+        x.classList.remove("newC")
+        console.log(x);
+        console.log(x.classList)
+
+        // replace classes
+        x.classList.replace("new","naya")
+        console.log(x);
+
+        // contains
+        console.log(x.classList.contains("new"))
+
+        // toggle:if available it will remove it if not it will add the class
+        x.classList.toggle("message")
+        console.log(x);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+// const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+// const alert = (message, type) => {
+//   const wrapper = document.createElement('div')
+//   wrapper.innerHTML = [
+//     `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+//     `   <div>${message}</div>`,
+//     '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+//     '</div>'
+//   ].join('')
+
+//   alertPlaceholder.append(wrapper)
+// }
+
+// const alertTrigger = document.getElementById('liveAlertBtn')
+// if (alertTrigger) {
+//   alertTrigger.addEventListener('click', () => {
+//     alert('Nice, you triggered this alert message!', 'success')
+//   })
+// }
+
+// Change the card title to red
+let ctitle=document.getElementsByClassName("card-title")[0]
+ctitle.style.color="red"
+
+// DOM navigation :Searching
+// can't give same ID to tags
+let gt=document.getElementById("firstcard")
+gt.style.color="blue"
+let cj=document.querySelectorAll(".card-title")
+cj[0].style.color="blue"
+cj[1].style.color="green"
+cj[2].style.color="grey"
+console.log(cj)
+
+// If we want only first
+document.querySelector(".this").style.color="cyan"
+document.querySelector(".this").style.color="black"
+console.log(document.getElementsByTagName("a"))
+console.log(document.body.getElementsByTagName("a"))
+console.log(document.querySelector(".card").getElementsByTagName("a"))
+console.log(document.getElementsByName("search"))

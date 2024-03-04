@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Event Capturing Demo</title>
+  <style type="text/css">
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #wrap {
+      padding: 15px;
+      display: inline-block;
+      background-color: #e6e6e6;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 15px 30px;
+      display: block;
+      border: 2px solid #000;
+      background: #ac6868;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    span {
+      padding: 15px 30px;
+      display: block;
+      border: 2px solid #000;
+      background: #ac6868;
+      cursor: pointer;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">DIV
+    <button class="hint">BTN
+      <span>S</span>
+    </button>
+  </div>
+  <script>
+    function showTagName(event) {
+      alert("Capturing: " + this.tagName);
+      event.stopPropagation();
+    }
+
+    var div = document.querySelector("div");
+    var button = document.querySelector("button");
+    var span = document.querySelector("span");
+
+    div.addEventListener("click", showTagName, true);
+    button.addEventListener("click", showTagName, true);
+    span.addEventListener("click", showTagName, true);
+  </script>
+</body>
+</html>

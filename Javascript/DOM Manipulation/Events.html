@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- three ways to -->
+    <!-- 1st HTML event handler onclick etc -->
+    <!-- 2nd on script tag -->
+    <!-- add event listenr and remove event listener -->
+</head>
+<body>
+    <div>
+        <h1>Some Important Events</h1>
+        <p>Mouse down mouse up mouseover mouseout </p>
+        <p>keydown: event fires when you press a key on keyboard &fires repeatedly while you are holding down the key</p>
+        <p>Keypress: when you press a character on keyboard like a b c it fires repeatedly while you hold down the key on keyboard</p>
+        <p>Scroll a document</p>
+    </div>
+    <!-- event bubbling and :event starts at the most specific element and towards  least  -->
+    <div id="cont">
+        <button type="button" onclick="msg()">Click Me!</button>
+        <!-- event capturing: when event starts at the least specific element and flows towrads the most specific element  -->
+    </div>
+    <div id="conti">
+        <button type="button" onclick="console.log(event);">Do not Click Me!</button>
+        <button type="button" onclick="console.log(event.type);">Do not Click Me type!</button>
+        <!-- this keyword also refers to target  -->
+        <button id="btn" type="button" onclick="console.log(this);">Do not Click Me:this target !</button>
+        <button id="btn" type="button" onclick="console.log(id);">ID Waala</button>
+        <button id="btn" type="button" onclick="console.log(type);">Type Waala</button>
+        <button id="btn" type="button" onclick="console.log(event.target);">Do not Click Me:target !</button>
+        <!-- when event occurs the web browser passed an event object to the event handler -->
+
+        <!-- by script -->
+        <button id="btn2">function event</button>
+        <button id="submit">Submit now!</button>
+    </div>
+    <script>
+        // method 1
+        function msg(){
+            console.log("Clicked Button from fn")
+        }
+        // method 2
+        let btn2=document.getElementById("btn2")
+        btn2.onclick=function(){
+            console.log("clicked")
+        }
+        // btn.onclick=null
+
+        // method 3
+        let btn3=document.getElementById("submit")
+        btn3.addEventListener('click',function(){
+            console.log("Button Clicked");
+        })
+        btn3.addEventListener('click',function(event){
+            console.log(event.type);
+        })
+        // also like this btn3.addEventListener('click',msg())
+        // use the extrenal name of fucntion to remove 
+        btn3.removeEventListener('click',msg())
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Event Bubbling Demo</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        div, span, button {
+            padding: 15px 30px;
+            display: block;
+            border: 2px solid #000;
+            background: #c1a5a5;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="alert('Bubbling: ' + this.tagName)">DIV
+        <span onclick="alert('Bubbling: ' + this.tagName)">SPAN
+            <button onclick="alert('Bubbling: ' + this.tagName)">BTN</button>
+        </span>
+    </div>
+</body>
+</html>
